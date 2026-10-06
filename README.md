@@ -1,4 +1,4 @@
-# AtelierXR — Fundamentals of HCI
+# Atelier — Fundamentals of HCI
 
 Group project for the course **Fundamentals of Human-Computer Interaction**  
 Politecnico di Milano · a.y. 2025/26 · Course theme: **Living with AI**

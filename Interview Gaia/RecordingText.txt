@@ -1,0 +1,56 @@
+Intervistatore 1: Allora, ciao Gaia, grazie per averci concesso il tempo per questa intervista.   
+
+Gaia: Grazie a voi. 
+  
+Intervistatore 1: Noi siamo un gruppo di studenti del Politecnico di Milano, stiamo facendo questo progetto, una ricerca per vedere come chi crea oggetti tramite CAD (come AutoCAD o nel tuo caso Onshape) utilizza l'IA per farsi aiutare durante la creazione di questi oggetti. Non c'è ovviamente nessuna risposta giusta o sbagliata e non stiamo neanche valutando le tue conoscenze, non è un esame o niente di questo genere ovviamente. Volevamo soltanto farci raccontare la tua esperienza visto che comunque ci hai detto che hai lavorato in questo settore e ti sei occupata di queste cose. Niente, se non ti dispiace noi vorremmo registrare e prendere appunti, quindi possiamo iniziare se per te va bene.   
+
+Gaia: Va bene.   
+
+Intervistatore 1: Perfetto. Allora, iniziamo con la prima domanda, facile facile. Se ci potessi raccontare cosa studi esattamente e che tipo di capi, cartamodelli o prototipi fisici ti capita di realizzare da zero.   
+
+Gaia: Ok. Allora io studio design della moda. Realizziamo qualsiasi tipo di capo. Spesso i cartamodelli ce li danno già fatti i nostri professori e magari noi semplicemente li modifichiamo e li adattiamo. Invece adesso, che sono al terzo anno, stiamo disegnando i nostri cartamodelli da zero. Ma abbiamo fatto qualsiasi tipo di capo: gonna, pantalone, camicia, giacca, qualsiasi cosa.   
+
+Intervistatore 1: Perfetto. Quando devi passare da un'idea nella tua testa al capo vero e proprio, qual è il tuo processo nel fare ciò?  
+ 
+Gaia: Allora, si fanno prove su prove. Quindi, se ho già il cartamodello, io semplicemente lo modifico; magari faccio una prova con un tessuto molto economico e semplice da cucire come la tela di cotone, quindi faccio un prototipo, vedo quali sono i difetti, capisco sul cartamodello poi effettivamente che cosa modificare, finché poi arrivo al definitivo e quindi poi lo realizzo nel tessuto che mi serve.   
+Intervistatore 1: Perfetto, top. Onshape immagino hai avuto una scelta nell'utilizzarlo oppure ti è stato... 
+  
+Gaia: No, no, ci è stato dato dal professore, era... sì, sì.   
+
+Intervistatore 1: Ah, ok, ok. E quando utilizzi Onshape, ci sono delle fasi specifiche in cui chiedi una mano a un'IA, che può essere ChatGPT, Claude o anche un'IA all'interno di Onshape stesso, se ce n'è?   Gaia: Allora no, un'intelligenza artificiale per adesso Onshape non ne ha, magari nei prossimi aggiornamenti non lo so.
+ 
+Intervistatore 1: Se ci sono dei momenti specifici in cui, mentre utilizzi Onshape, utilizzi un'IA per farti dare una mano...   Gaia: Ah, ok. No, no, per quello no. Diciamo che abbiamo imparato un metodo e seguo abbastanza quello.
+   
+Intervistatore 2: Ma per caso capita in Onshape che ti fa delle autocorrezioni, delle cose in automatico che tu magari invece vuoi fare manualmente?
+   
+Gaia: No, al massimo mi dà un errore, ma spesso non mi dice neanche bene qual è. Cioè, semplicemente io magari gli do un comando che lui non esegue perché mi dà rosso, e quindi io devo capire qual è la parte sbagliata che devo rifare.
+   
+Intervistatore 1: Ok, ok, perfetto. E in quel caso lo capisci da sola oppure ti è mai capitato di chiedere a un'IA per farti dare una mano?  
+
+Gaia: No, lo guardo da sola. Sì, magari piuttosto chiedo a qualcuno che sa usare il programma.   
+
+Intervistatore 1: Ok. Nel caso, se tu all'interno di Onshape potessi avere un'IA che ti aiutasse in questi casi, cosa ne penseresti?   
+
+Gaia: Sarebbe molto utile, perché magari per oggetti semplici riesco anche ad arrivare al risultato da sola. Mi è capitato in un caso che dovevo modellare un paio di scarpe che, anche con gli aiuti del professore, alla fine sono riuscita a concludere l'oggetto, però a livello visivo non mi soddisfaceva perché non era venuta proprio bene. In quel caso avrei chiesto una mano, cioè quali comandi o se seguire un altro metodo di rappresentazione, quindi sì, in quel caso l'avrei usata se ci fosse stata.   Intervistatore 1: E in quest'altro caso, avresti preferito che finisse il progetto e basta (quindi avere un pulsante che premi e ti risolve lui il problema) oppure avere un'IA che ti aiuti, cioè ti spieghi magari qual è il problema e ti dia una mano a risolvere o comunque ti aiuti a te a capire bene il problema e a capire come risolverlo?   Gaia: No, avrei preferito che mi desse dei suggerimenti o almeno mi dicesse perché spesso mi dava errore in tanti casi per cui poi è venuto male, perché cercavo il "magheggio" per far andar tutto a posto. Cioè magari anche un qualcosa, un'IA che mi dica qual è l'errore e perché non riesco a dare quella funzione.   Intervistatore 1: Perfetto. Ok. Quando tu lavori con Onshape spesso ti succede che il software ti mostra un risultato estetico magari perfetto. Ti succede mai che magari una misura, un passaggio appunto che vedi su Onshape, poi in realtà non risulti lo stesso che ottieni nella realtà?   Gaia: Allora, non abbiamo mai realizzato poi effettivamente gli oggetti che abbiamo modellato in Onshape, quindi non lo so. 
+
+Intervistatore 1: C'è qualcosa magari che non ti ho chiesto già su questo mondo, su come utilizzare Onshape e di cui ci vorresti parlare? Una problematica che riscontri... raccontaci magari nel tuo progetto cosa hai fatto nello specifico e come secondo te sarebbe potuto essere meglio l'esperienza all'interno di Onshape.
+
+Gaia: Noi modellavamo degli oggetti, magari il professore ci dava la proiezione ortogonale o un'assonometria con le misure (o anche senza, in alcuni casi per forme più organiche dovevamo un po' immaginarle), e noi dovevamo realizzarlo con il programma. Potevamo scegliere se utilizzare il metodo solido o la modellazione per superfici. Poi il passaggio successivo che dovevamo fare era scaricare il modello, trasferirlo su Keyshot e su Keyshot noi potevamo scegliere il materiale in base alle diverse parti. Tu praticamente dividevi il modello in parti (quindi su Onshape davi dei colori alle stesse parti che dovevano avere poi lo stesso materiale) e poi su Keyshot selezionavi la parte e davi il materiale (metallo, vetro, eccetera) e poi gli potevi dare un'ambientazione. La cosa secondo me utile sarebbe stata magari inserire questa funzionalità direttamente in Onshape, perché nel momento in cui magari io lo trasferivo su Keyshot mi accorgevo di un errore, dovevo cancellare tutto, tornare su Onshape, modificarlo da lì e rifare un po' da capo. Invece, se fosse stato collegato (perché erano proprio due programmi diversi) sarebbe stato più immediato secondo me questo secondo passaggio.   Intervistatore 1: E invece Keyshot ha uguale delle funzioni di automatismo che non ti fa magari scegliere a te con cura determinate cose, che magari fa tutto in automatico e non capisci perché?   Gaia: No, per quello no, ti dà dei suggerimenti però non l'abbiamo neanche usato così tanto, però non... in automatico non faceva niente.   Intervistatore 1: E questi suggerimenti sono cose molto basilari o... se magari questi suggerimenti fossero (cioè, se utilizzassero appunto come su Onshape) un'IA per darti dei suggerimenti più specifici, cosa ne penseresti?   
+
+Gaia: Sì, secondo me sarebbe utile perché Keyshot magari ti dava dei suggerimenti su materiali da usare per alcune parti ma erano molto random. Quindi magari io avevo la boccetta di profumo a cui dovevo dare dei materiali e lui mi metteva il vetro viola al tappo rosso, cioè proprio a caso. Un'intelligenza artificiale magari avrebbe riconosciuto l'oggetto e mi avrebbe proposto delle opzioni verosimili, ecco.   
+
+Intervistatore 1: Comunque tu, nei tuoi processi, dei lavori che fai per il tuo corso, utilizzi spesso l'intelligenza artificiale in questo tipo di progetti oppure ti viene da fare tutto di testa tua e non hai bisogno di utilizzarla?  
+ 
+Gaia: Allora no, non la utilizzo quasi mai per una soddisfazione personale di riuscire a fare le cose da sola.   
+
+Intervistatore 1: Però ci sono mai dei momenti in cui appunto dici: "Però se qua io usassi l'IA farei molto prima"?   
+
+Gaia: Allora, mi è venuto in mente che cioè non la utilizzo magari durante il processo produttivo (quindi cartamodelli, cucito, eccetera) ma magari nella parte di progettazione sì. Ad esempio ieri o l'altro ieri io e l'Ottavia adesso stiamo decidendo il concept del progetto e ci serviva una parola chiave che non riuscivamo a trovare (non ce ne convinceva nessuna) e lì abbiamo chiesto all'intelligenza artificiale tipo: "Dacci un aggettivo così, così, che mi evochi questo e quest'altro". Quindi magari sì, in alcuni passaggi sì, più sulla progettazione.   
+
+Intervistatore 1: E durante questi passaggi, credi che comunque utilizzare l'IA sia soltanto un qualcosa per, che ti serve a fine del progetto e basta, oppure ti serve anche appunto a migliorare, a imparare più cose e a diventare migliore nel tuo campo?   
+
+Gaia: No, secondo me è utile perché magari, non so, appunto in questo esempio io magari cercavo una parola sul dizionario e non riuscivo a trovare il collegamento con quello che volevo io. Invece l'IA mi dava un'altra visione della parola o del concetto e mi faceva quadrare un po' il discorso. Perché magari io di un termine non conoscevo un significato, ne conoscevo un altro, e invece l'IA mi suggeriva più cose.   
+
+Intervistatore 1: Ok, ci siamo, grazie mille. Grazie mille dell'aiuto. Ti chiederemo la firma al documento e...   
+
+Gaia: Ok, perfetto. Grazie.  

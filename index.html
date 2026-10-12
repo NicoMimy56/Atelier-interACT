@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InterAct – Progetto HCI</title>
+  <link rel="icon" href="assets/logo.jpg">
+  <style>
+    :root {
+      --navy: #132d55;
+      --teal: #13aebf;
+      --teal-light: #e6f6f8;
+      --grey: #5b6577;
+      --border: #dde3ea;
+      --bg: #ffffff;
+      --bg-alt: #f6f8fa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--navy);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    header .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .logo img { height: 56px; display: block; }
+    nav a {
+      text-decoration: none; margin-left: 24px;
+      font-weight: 500; color: var(--grey);
+    }
+    nav a:hover { color: var(--teal); }
+
+    /* ---------- HERO ---------- */
+    .hero { padding: 80px 0 60px; text-align: center; }
+    .hero img { max-width: 420px; width: 100%; }
+    .hero p {
+      max-width: 680px; margin: 20px auto 0;
+      color: var(--grey); font-size: 1.1rem;
+    }
+
+    /* ---------- SEZIONI ---------- */
+    section { padding: 60px 0; }
+    section.alt { background: var(--bg-alt); }
+    h2 { font-size: 1.8rem; margin-bottom: 8px; }
+    h2 span { color: var(--teal); }
+    .subtitle { color: var(--grey); margin-bottom: 32px; }
+
+    /* ---------- CHI SIAMO ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .about-grid h3 { margin-bottom: 8px; }
+    .about-grid p { color: var(--grey); }
+
+    /* ---------- EMBED CANVA ---------- */
+    .embed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .embed-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+    }
+    .embed-card h3 { padding: 14px 18px; font-size: 1rem; }
+    .embed-frame {
+      position: relative; width: 100%; height: 0;
+      padding-top: 56.25%;           /* formato 16:9 */
+      background: var(--teal-light);
+    }
+    .embed-frame iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+    .embed-placeholder {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--grey); font-size: .9rem; text-align: center; padding: 20px;
+    }
+
+    /* ---------- CONSEGNE ---------- */
+    .deliverables { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; padding: 22px;
+      display: flex; flex-direction: column;
+    }
+    .card .num {
+      font-size: .8rem; font-weight: 700; letter-spacing: .05em;
+      color: var(--teal); text-transform: uppercase;
+    }
+    .card h3 { margin: 4px 0 8px; }
+    .card p { color: var(--grey); font-size: .95rem; flex: 1; }
+    .card .date { font-size: .85rem; color: var(--grey); margin-top: 10px; }
+    .buttons { display: flex; gap: 10px; margin-top: 16px; }
+    .btn {
+      flex: 1; text-align: center; text-decoration: none;
+      padding: 10px 12px; border-radius: 6px;
+      font-weight: 600; font-size: .9rem;
+      border: 2px solid var(--teal);
+    }
+    .btn.primary { background: var(--teal); color: #fff; }
+    .btn.secondary { color: var(--teal); }
+    .btn:hover { opacity: .85; }
+    .btn.disabled {
+      border-color: var(--border); background: var(--bg-alt);
+      color: #a0a8b5; pointer-events: none;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--navy); color: #fff;
+      padding: 30px 0; text-align: center; font-size: .9rem;
+    }
+    footer p { opacity: .85; }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 760px) {
+      nav { display: none; }
+      .about-grid, .embed-grid { grid-template-columns: 1fr; }
+      .hero { padding: 50px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo"><img src="assets/logo.jpg" alt="InterAct"></a>
+      <nav>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#presentazione">Presentazione</a>
+        <a href="#consegne">Consegne</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <div class="hero">
+    <div class="container">
+      <img src="assets/logo.jpg" alt="Logo InterAct">
+      <p>
+        Progetto del corso di Fondamenti di Human-Computer Interaction – Politecnico di Milano.
+        <!-- MODIFICA: una frase di presentazione del progetto -->
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= CHI SIAMO ================= -->
+  <section id="chi-siamo" class="alt">
+    <div class="container">
+      <h2>Chi <span>siamo</span></h2>
+      <p class="subtitle">Il team e il progetto</p>
+      <div class="about-grid">
+        <div>
+          <h3>Il team</h3>
+          <p>
+            <!-- MODIFICA: nomi dei membri del gruppo -->
+            InterAct è un gruppo di studenti di Ingegneria Informatica del Politecnico di Milano:
+            Nome Cognome, Nome Cognome, Nome Cognome, Nome Cognome.
+          </p>
+        </div>
+        <div>
+          <h3>Il progetto</h3>
+          <p>
+            <!-- MODIFICA: descrizione breve del vostro tema -->
+            Breve descrizione del problema affrontato, degli utenti target e dell'obiettivo del progetto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRESENTAZIONE (EMBED CANVA) ================= -->
+  <section id="presentazione">
+    <div class="container">
+      <h2>La nostra <span>presentazione</span></h2>
+      <p class="subtitle">Chi siamo e cosa vogliamo fare</p>
+
+      <div class="embed-grid">
+        <div class="embed-card">
+          <h3>Presentazione 1</h3>
+          <div class="embed-frame">
+            <!--
+              Su Canva: Condividi → Altro → Incorpora → copia il link "src" dell'iframe,
+              che ha la forma https://www.canva.com/design/XXXXXXXX/view?embed
+              Poi sostituisci il placeholder qui sotto con:
+              <iframe loading="lazy" src="INCOLLA_QUI_IL_LINK" allowfullscreen allow="fullscreen"></iframe>
+            -->
+            <div class="embed-placeholder">Incorpora qui la prima pagina Canva</div>
+          </div>
+        </div>
+
+        <div class="embed-card">
+          <h3>Presentazione 2</h3>
+          <div class="embed-frame">
+            <div class="embed-placeholder">Incorpora qui la seconda pagina Canva</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONSEGNE ================= -->
+  <section id="consegne" class="alt">
+    <div class="container">
+      <h2>Le <span>consegne</span></h2>
+      <p class="subtitle">Per ogni consegna puoi aprire la presentazione oppure la relazione dettagliata</p>
+      <div class="deliverables" id="deliverables"></div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <p>© 2026 InterAct · Fondamenti di HCI · Politecnico di Milano</p>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      ===== ELENCO CONSEGNE =====
+      Per aggiungere i link basta compilare i campi qui sotto:
+        canva     → link alla presentazione Canva
+        relazione → link al file su GitHub
+      Se un campo è vuoto (""), il bottone appare grigio e non cliccabile.
+    */
+    const consegne = [
+      {
+        numero: "Compito 1",
+        titolo: "Needfinding",
+        descrizione: "Needfinding e sintesi dei risultati.",
+        data: "",
+        canva: "",
+        relazione: ""
+      },
+      {
+        numero: "Compito 2",
+        titolo: "Revisione e focalizzazione",
+        descrizione: "Revisione dei risultati e focalizzazione del problema.",
+        data: "",
+        canva: "",
+        relazione: ""
+      },
+      {
+        numero: "Compito 3",
+        titolo: "Prototipo low-fidelity",
+        descrizione: "Primo prototipo a bassa fedeltà.",
+        data: "",
+        canva: "",
+        relazione: ""
+      },
+      {
+        numero: "Compito 4",
+        titolo: "Prototipo medium-fidelity",
+        descrizione: "Raffinamento e prototipo a media fedeltà.",
+        data: "",
+        canva: "",
+        relazione: ""
+      },
+      {
+        numero: "Compito 5",
+        titolo: "Valutazione euristica",
+        descrizione: "Valutazione euristica del prototipo di un altro gruppo.",
+        data: "",
+        canva: "",
+        relazione: ""
+      },
+      {
+        numero: "Compito 6",
+        titolo: "User testing e report finale",
+        descrizione: "User testing, raffinamento del prototipo e report finali.",
+        data: "",
+        canva: "",
+        relazione: ""
+      }
+    ];
+
+    const container = document.getElementById("deliverables");
+
+    function bottone(link, testo, classe) {
+      if (!link) return `<span class="btn ${classe} disabled">${testo}</span>`;
+      return `<a class="btn ${classe}" href="${link}" target="_blank" rel="noopener">${testo}</a>`;
+    }
+
+    consegne.forEach(c => {
+      container.insertAdjacentHTML("beforeend", `
+        <div class="card">
+          <span class="num">${c.numero}</span>
+          <h3>${c.titolo}</h3>
+          <p>${c.descrizione}</p>
+          ${c.data ? `<span class="date">Consegna: ${c.data}</span>` : ""}
+          <div class="buttons">
+            ${bottone(c.canva, "Presentazione", "primary")}
+            ${bottone(c.relazione, "Relazione", "secondary")}
+          </div>
+        </div>
+      `);
+    });
+  </script>
+</body>
+</html>

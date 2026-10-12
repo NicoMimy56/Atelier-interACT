@@ -1,2 +1,29 @@
+# =========================
+# File di sistema macOS
+# =========================
 .DS_Store
-.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# =========================
+# File di sistema Windows
+# =========================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.cab
+desktop.ini
+$RECYCLE.BIN/
+
+# =========================
+# File di sistema Linux
+# =========================
+*~
+.fuse_hidden*
+.directory
+.Trash-*

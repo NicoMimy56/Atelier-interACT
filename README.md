@@ -47,7 +47,7 @@ Studenti, maker e giovani progettisti che progettano e realizzano pezzi fisici:
 
 | Consegna | Contenuto | Cartella |
 |----------|-----------|----------|
-| **C1 — Individuazione dei bisogni** | Presentazione, relazione, dati del questionario, materiale delle interviste | [`C1/`](C1/) |
+| **C1 — Individuazione dei bisogni** | Presentazione, relazione, questionario, interviste | [`Consegne/C1-Needfinding/`](Consegne/C1-Needfinding/) |
 
 ---
 
@@ -55,17 +55,19 @@ Studenti, maker e giovani progettisti che progettano e realizzano pezzi fisici:
 
 <!-- STRUTTURA:INIZIO -->
 ```
-ProgettoHCI/
-├── README.md
-└── C1/
-    ├── Presentazione_C1.pdf
-    ├── Relazione_C1.pdf
-    ├── Questionario/
-    ├── Interviste/
-    │   ├── Tracce/
-    │   ├── Appunti/
-    │   └── Consensi/
-    └── Immagini/
+index.html                       sito GitHub Pages (resta nella radice)
+assets/
+Consegne/
+└── C1-Needfinding/
+    ├── 01-Documenti/          presentazione e relazione da consegnare
+    ├── 02-Questionario/       risposte e grafici
+    ├── 03-Interviste/         tracce, consensi, trascrizioni, profilazione
+    ├── 04-Allegati/           foto e screenshot
+    └── Archivio/              versioni precedenti
+OrganizzazioneInterACT/
+├── 01-Tema/                   tema di progetto
+├── 02-Needfinding/            domande e guida alle associazioni
+└── 03-Ideazione/              report iniziale di identificazione del tema
 ```
 <!-- STRUTTURA:FINE -->
 

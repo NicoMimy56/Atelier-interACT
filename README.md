@@ -3,7 +3,7 @@
 Progetto di gruppo del corso **Fondamenti di Human-Computer Interaction**
 Politecnico di Milano · A.A. 2026/27 · Tema del corso: **Living with AI**
 
-**Gruppo interACT:** Giovanni Lodovici · Federico Marletta · Nicholas Mihali Sandu · Marco Minora · Jaime Martín Nieto · Andrea Simoncini
+**Gruppo interACT:** Giovanni Lodovici · Federico Marletta · Sandu Nicholas Mihali · Marco Minora · Jaime Martín Nieto · Andrea Simoncini
 
 ---
 

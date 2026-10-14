@@ -3,245 +3,510 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InterAct – Progetto HCI</title>
-  <link rel="icon" href="assets/logo.jpg">
+  <title>InterAct — Atelier · Fondamenti di HCI</title>
+  <meta name="description" content="InterAct è il progetto di Fondamenti di HCI del Politecnico di Milano. Studia come restituire comprensione e responsabilità quando l'intelligenza artificiale entra nella realizzazione di oggetti fisici.">
+  <meta name="theme-color" content="#10243f">
+  <link rel="icon" href="assets/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,450;0,6..72,560;1,6..72,450&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #132d55;
-      --teal: #13aebf;
-      --teal-light: #e6f6f8;
-      --grey: #5b6577;
-      --border: #dde3ea;
-      --bg: #ffffff;
-      --bg-alt: #f6f8fa;
+      --ink: #10243f;
+      --teal: #0c8f9e;
+      --teal-bright: #14b4c6;
+      --muted: #4a5564;
+      --faint: #8b8176;
+      --line: #e6e1d8;
+      --paper: #f6f4ef;
+      --white: #fffcf8;
+      --max: 1120px;
+      --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+      --sans: "Outfit", system-ui, sans-serif;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: var(--navy);
-      background: var(--bg);
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
       line-height: 1.6;
+      font-size: 1.05rem;
     }
+    img { max-width: 100%; display: block; }
     a { color: inherit; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    :focus-visible { outline: 2px solid var(--teal-bright); outline-offset: 3px; }
+    .skip {
+      position: absolute; left: 12px; top: -40px;
+      background: #fff; color: var(--ink); padding: 8px 12px; z-index: 30;
+    }
+    .skip:focus { top: 12px; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
 
-    /* ---------- HEADER ---------- */
     header {
-      position: sticky; top: 0; z-index: 10;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
     }
-    header .container {
+    .bar {
       display: flex; align-items: center; justify-content: space-between;
-      height: 70px;
+      height: 76px; gap: 24px;
     }
-    .logo img { height: 56px; display: block; }
+    .brand img { height: 38px; width: auto; }
+    nav { display: flex; align-items: center; gap: 28px; }
     nav a {
-      text-decoration: none; margin-left: 24px;
-      font-weight: 500; color: var(--grey);
+      text-decoration: none; color: var(--muted);
+      font-size: .92rem; font-weight: 500; letter-spacing: .01em;
     }
     nav a:hover { color: var(--teal); }
-
-    /* ---------- HERO ---------- */
-    .hero { padding: 80px 0 60px; text-align: center; }
-    .hero img { max-width: 420px; width: 100%; }
-    .hero p {
-      max-width: 680px; margin: 20px auto 0;
-      color: var(--grey); font-size: 1.1rem;
+    .menu {
+      display: none; width: 42px; height: 42px;
+      border: 1px solid var(--line); border-radius: 8px;
+      background: var(--white); padding: 0; cursor: pointer;
+    }
+    .menu span {
+      display: block; width: 18px; height: 1.5px; margin: 5px auto;
+      background: var(--ink);
     }
 
-    /* ---------- SEZIONI ---------- */
-    section { padding: 60px 0; }
-    section.alt { background: var(--bg-alt); }
-    h2 { font-size: 1.8rem; margin-bottom: 8px; }
-    h2 span { color: var(--teal); }
-    .subtitle { color: var(--grey); margin-bottom: 32px; }
+    .hero {
+      background: var(--ink);
+      color: #f4efe6;
+      padding: 88px 0 80px;
+    }
+    .kicker {
+      margin: 0 0 22px;
+      color: var(--teal-bright);
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .74rem;
+    }
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 450;
+      font-size: clamp(4.2rem, 10vw, 7.4rem);
+      line-height: .9;
+      letter-spacing: -.035em;
+    }
+    h1 span { color: var(--teal-bright); }
+    .tagline {
+      max-width: 18em;
+      margin: 28px 0 0;
+      font-family: var(--serif);
+      font-weight: 450;
+      font-style: italic;
+      font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+    .lead {
+      max-width: 38rem;
+      margin: 18px 0 0;
+      color: #d5d0c6;
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .hero-actions a {
+      text-decoration: none;
+      border: 1px solid rgba(244, 239, 230, .35);
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: .92rem;
+      font-weight: 500;
+    }
+    .hero-actions a:hover { border-color: var(--teal-bright); color: var(--teal-bright); }
 
-    /* ---------- CHI SIAMO ---------- */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .about-grid h3 { margin-bottom: 8px; }
-    .about-grid p { color: var(--grey); }
-
-    /* ---------- EMBED CANVA ---------- */
-    .embed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .embed-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 10px; overflow: hidden;
+    section { padding: 88px 0; scroll-margin-top: 88px; }
+    h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 450;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -.03em;
+      line-height: 1.1;
     }
-    .embed-card h3 { padding: 14px 18px; font-size: 1rem; }
-    .embed-frame {
-      position: relative; width: 100%; height: 0;
-      padding-top: 56.25%;           /* formato 16:9 */
-      background: var(--teal-light);
-    }
-    .embed-frame iframe {
-      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
-    }
-    .embed-placeholder {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--grey); font-size: .9rem; text-align: center; padding: 20px;
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
 
-    /* ---------- CONSEGNE ---------- */
-    .deliverables { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-    .card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 10px; padding: 22px;
-      display: flex; flex-direction: column;
+    .split {
+      display: grid;
+      grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
     }
-    .card .num {
-      font-size: .8rem; font-weight: 700; letter-spacing: .05em;
-      color: var(--teal); text-transform: uppercase;
-    }
-    .card h3 { margin: 4px 0 8px; }
-    .card p { color: var(--grey); font-size: .95rem; flex: 1; }
-    .card .date { font-size: .85rem; color: var(--grey); margin-top: 10px; }
-    .buttons { display: flex; gap: 10px; margin-top: 16px; }
-    .btn {
-      flex: 1; text-align: center; text-decoration: none;
-      padding: 10px 12px; border-radius: 6px;
-      font-weight: 600; font-size: .9rem;
-      border: 2px solid var(--teal);
-    }
-    .btn.primary { background: var(--teal); color: #fff; }
-    .btn.secondary { color: var(--teal); }
-    .btn:hover { opacity: .85; }
-    .btn.disabled {
-      border-color: var(--border); background: var(--bg-alt);
-      color: #a0a8b5; pointer-events: none;
+    .split > div:first-child { position: sticky; top: 108px; }
+    .prose { max-width: 40rem; }
+    .prose p { margin: 0 0 18px; color: var(--ink); }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose em { font-family: var(--serif); font-style: italic; }
+
+    .aside {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      max-width: 40rem;
     }
 
-    /* ---------- FOOTER ---------- */
+    .who-label {
+      margin: 36px 0 0;
+      color: var(--teal);
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .who { margin: 8px 0 0; padding: 0; list-style: none; max-width: 40rem; }
+    .who li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .who li:last-child { border-bottom: 1px solid var(--line); }
+
+    .findings {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      margin: 40px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .findings li { padding-top: 16px; border-top: 1px solid var(--ink); }
+    .findings strong {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: 1.35rem;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .findings p { margin: 0; color: var(--muted); }
+    .close {
+      margin: 36px 0 0;
+      max-width: 40rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.35;
+      letter-spacing: -.02em;
+    }
+
+    .people {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+      margin: 40px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .people figure { margin: 0; }
+    .avatar {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #efeae3;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+    }
+    .people figcaption {
+      margin-top: 12px;
+      text-align: center;
+      font-size: .92rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+    }
+    .contacts a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .contacts svg { width: 14px; height: 14px; flex: none; }
+    .contacts a:hover { text-decoration: underline; }
+    .contacts a[href=""] { color: var(--faint); pointer-events: none; }
+
+    .steps { list-style: none; margin: 36px 0 0; padding: 0; }
+    .step {
+      display: grid;
+      grid-template-columns: 64px 1fr auto;
+      gap: 8px 24px;
+      align-items: baseline;
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+    }
+    .step:last-child { border-bottom: 1px solid var(--line); }
+    .step .n {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .step h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 560;
+      font-size: 1.45rem;
+      letter-spacing: -.02em;
+    }
+    .step p { margin: 6px 0 0; color: var(--muted); grid-column: 2; }
+    .step .links { grid-column: 2; display: flex; gap: 18px; margin-top: 10px; }
+    .step .links a { color: var(--teal); font-weight: 600; text-underline-offset: 3px; }
+    .step .state {
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--teal);
+      text-align: right;
+    }
+    .step.soon .n,
+    .step.soon h3 { color: var(--faint); }
+    .step.soon p { color: #a39d94; }
+    .step.soon .state { color: var(--faint); font-weight: 500; }
+
     footer {
-      background: var(--navy); color: #fff;
-      padding: 30px 0; text-align: center; font-size: .9rem;
+      background: var(--ink);
+      color: #f4efe6;
+      padding: 36px 0;
+      font-size: .95rem;
     }
-    footer p { opacity: .85; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer p { margin: 0; color: #d5d0c6; }
+    footer a { color: #f4efe6; }
 
-    /* ---------- MOBILE ---------- */
+    @media (max-width: 980px) {
+      .people { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .findings { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; gap: 20px; }
+      .split > div:first-child { position: static; }
+    }
     @media (max-width: 760px) {
-      nav { display: none; }
-      .about-grid, .embed-grid { grid-template-columns: 1fr; }
-      .hero { padding: 50px 0 40px; }
+      .menu { display: inline-block; }
+      nav {
+        display: none; position: absolute; left: 0; right: 0; top: 76px;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--white); border-bottom: 1px solid var(--line);
+        padding: 8px 16px 16px;
+      }
+      header.is-open nav { display: flex; }
+      nav a { padding: 12px 8px; }
+      .hero { padding: 56px 0 48px; }
+      section { padding: 56px 0; }
+      .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+      .step { grid-template-columns: 44px 1fr; }
+      .step .state { grid-column: 2; text-align: left; margin-top: 4px; }
+      .step p, .step .links { grid-column: 2; }
     }
   </style>
 </head>
-<body>
-
-  <!-- ================= HEADER ================= -->
+<body id="inizio">
+  <a class="skip" href="#contenuto">Vai al contenuto</a>
   <header>
-    <div class="container">
-      <a href="#" class="logo"><img src="assets/logo.jpg" alt="InterAct"></a>
-      <nav>
-        <a href="#chi-siamo">Chi siamo</a>
-        <a href="#presentazione">Presentazione</a>
-        <a href="#consegne">Consegne</a>
+    <div class="wrap bar">
+      <a class="brand" href="#inizio"><img src="assets/logo.png" alt="InterAct"></a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <a href="#problema">Problema</a>
+        <a href="#ricerca">Ricerca</a>
+        <a href="#gruppo">Gruppo</a>
+        <a href="#percorso">Percorso</a>
       </nav>
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <div class="hero">
-    <div class="container">
-      <img src="assets/logo.jpg" alt="Logo InterAct">
-      <p>
-        Progetto del corso di Fondamenti di Human-Computer Interaction – Politecnico di Milano.
-        <!-- MODIFICA: una frase di presentazione del progetto -->
-      </p>
-    </div>
-  </div>
-
-  <!-- ================= CHI SIAMO ================= -->
-  <section id="chi-siamo" class="alt">
-    <div class="container">
-      <h2>Chi <span>siamo</span></h2>
-      <p class="subtitle">Il team e il progetto</p>
-      <div class="about-grid">
-        <div>
-          <h3>Il team</h3>
-          <p>
-            <!-- MODIFICA: nomi dei membri del gruppo -->
-            InterAct è formato da un gruppo di studenti di Ingegneria Informatica del Politecnico di Milano:
-            Lodovici Giovanni, Marletta Federico, Mihali Sandu Nicholas, Minora Marco, Nieto Martìn Jaime, Simoncini Andrea.
-          </p>
-        </div>
-        <div>
-          <h3>Il progetto</h3>
-          <p>
-            <!-- MODIFICA: descrizione breve del vostro tema -->
-            Il tema scelto è \textit{Atelier}: il supporto dell'intelligenza artificiale nella realizzazione di oggetti fisici (prototipi, modelli e maquette, capi d'abbigliamento, pezzi stampati in 3D o tagliati al laser, montaggi e riparazioni).
-            Sempre più persone che realizzano oggetti fisici chiedono a un assistente AI come fare: come dimensionare un pezzo, quali parametri impostare, in che ordine montare le parti, quale materiale scegliere. L'AI tende però a fornire sequenze e valori già chiusi e definitivi. L'utente esegue i passaggi e spesso ottiene un risultato che funziona, ma chi lo ha realizzato non si è costruito un’idea dei vincoli fisici e dei compromessi che stanno dietro a quelle determinate scelte.  È quello che in letteratura si chiama \textbf{deskilling}: la competenza non si forma e la responsabilità della decisione diventa opaca, perché il ragionamento resta nascosto dentro lo strumento.
-          </p>
+  <main id="contenuto">
+    <div class="hero">
+      <div class="wrap">
+        <p class="kicker">Atelier · Fondamenti di HCI · A.A. 2026/27</p>
+        <h1>Inter<span>Act</span></h1>
+        <p class="tagline">Capire il pezzo, prima di fabbricarlo.</p>
+        <p class="lead">Chi realizza prototipi e montaggi chiede a un assistente come fare. La risposta arriva già chiusa: il risultato può funzionare, ma vincoli e compromessi restano nascosti.</p>
+        <div class="hero-actions">
+          <a href="https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view" target="_blank" rel="noopener">Presentazione</a>
+          <a href="Consegne/C1-Needfinding/01-Documenti/C1_Relazione.pdf">Relazione</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= PRESENTAZIONE (EMBED CANVA) ================= -->
-  <section id="presentazione">
-    <div class="container">
-      <h2>La nostra <span>presentazione</span></h2>
-      <p class="subtitle">Chi siamo</p>
-
-      <div class="embed-grid">
-        <div class="embed-card">
-          <h3>Presentazione 1</h3>
-          <div class="embed-frame">
-            <div class="embed-placeholder">
-              <iframe loading="lazy" src="https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view?embed#3" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-            </div>
-          </div>
+    <section id="problema">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Living with AI</p>
+          <h2>Il problema</h2>
         </div>
-
-        <div class="embed-card">
-          <h3>Presentazione 2</h3>
-          <div class="embed-frame">
-            <div class="embed-placeholder">
-              <iframe loading="lazy" src="https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view?embed#4" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-            </div>
+        <div>
+          <div class="prose">
+            <p>Studenti, maker e giovani progettisti chiedono a ChatGPT, Gemini o Claude come realizzare un oggetto fisico: come dimensionare un pezzo, quale materiale scegliere, in che ordine montare le parti. L’assistente tende a consegnare una sequenza già chiusa. Chi la esegue può ottenere un risultato che funziona, senza essersi fatto un’idea delle forze in gioco, dei vincoli e delle alternative scartate.</p>
+            <p>È il <em>deskilling</em>. La competenza non si forma, e la responsabilità della decisione diventa opaca, perché il ragionamento resta dentro lo strumento. InterAct vuole riportare comprensione, alternative e responsabilità prima della fabbricazione: nel momento in cui l’intelligenza artificiale entra nel lavoro fisico, prima della stampa, del taglio o del montaggio.</p>
           </div>
+          <p class="aside">La forma dello strumento non era decisa in partenza. Il punto di partenza è il computer; la realtà estesa resta una possibilità, non una premessa.</p>
+          <p class="who-label">Per chi</p>
+          <ul class="who">
+            <li>Team e associazioni studentesche, dalla Formula SAE alla robotica</li>
+            <li>Studenti di Design, Ingegneria e Architettura, tra prototipi e maquette</li>
+            <li>Chi lavora in un laboratorio o in un makerspace</li>
+            <li>Giovani professionisti appena usciti dall’università</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= CONSEGNE ================= -->
-  <section id="consegne" class="alt">
-    <div class="container">
-      <h2>Le <span>consegne</span></h2>
-      <p class="subtitle">Per ogni consegna puoi aprire la presentazione oppure la relazione dettagliata</p>
-      <div class="deliverables" id="deliverables"></div>
-    </div>
-  </section>
+    <section id="ricerca">
+      <div class="wrap">
+        <p class="eyebrow">Needfinding</p>
+        <h2>Quello che le persone fanno già</h2>
+        <div class="prose" style="margin-top: 22px;">
+          <p>Abbiamo raccolto 35 risposte a un questionario e condotto cinque interviste semi-strutturate, ciascuna tra i 20 e i 60 minuti. Le domande riguardavano ciò che le persone avevano già fatto, non una soluzione da valutare.</p>
+        </div>
+        <ol class="findings">
+          <li>
+            <strong>Si parte dalla chat</strong>
+            <p>L’assistente entra come punto di partenza. Spesso, però, ci si adatta al pezzo senza aver capito il perché.</p>
+          </li>
+          <li>
+            <strong>Si resta nella chat</strong>
+            <p>Se la risposta non convince, la domanda viene riformulata lì, invece di andare a verificare altrove.</p>
+          </li>
+          <li>
+            <strong>Si impara guardando</strong>
+            <p>Video e colleghi contano più dei manuali. Il computer è il dispositivo di riferimento: quasi nessuno ha un visore.</p>
+          </li>
+        </ol>
+        <p class="close">Ne escono tre bisogni: confrontare alternative e compromessi, capire perché una scelta è stata indicata, e sapere quanto fidarsi di quell’indicazione.</p>
+      </div>
+    </section>
 
-  <!-- ================= FOOTER ================= -->
+    <section id="gruppo">
+      <div class="wrap">
+        <p class="eyebrow">Ingegneria Informatica</p>
+        <h2>Il gruppo</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0">
+          <symbol id="icon-github" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </symbol>
+          <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/>
+          </symbol>
+        </svg>
+        <ul class="people">
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/giovanni-lodovici.jpg" alt=""></div>
+              <figcaption>Giovanni Lodovici<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/federico-marletta.jpg" alt=""></div>
+              <figcaption>Federico Marletta<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/nicholas-mihali-sandu.jpg" alt=""></div>
+              <figcaption>Sandu Nicholas Mihali<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/marco-minora.jpg" alt=""></div>
+              <figcaption>Marco Minora<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/jaime-martin-nieto.jpg" alt=""></div>
+              <figcaption>Jaime Martín Nieto<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <div class="avatar"><img src="assets/gruppo/andrea-simoncini.jpg" alt=""></div>
+              <figcaption>Andrea Simoncini<span class="contacts"><a href=""><svg aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a><a href=""><svg aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></span></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="percorso">
+      <div class="wrap">
+        <p class="eyebrow">Le consegne</p>
+        <h2>Il percorso</h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <div class="container">
-      <p>© 2026 InterAct · Fondamenti di HCI · Politecnico di Milano</p>
+    <div class="wrap">
+      <p>InterAct · Fondamenti di HCI · Politecnico di Milano</p>
+      <a href="https://github.com/NicoMimy56/Progetto-Human-Computer-Interaction" target="_blank" rel="noopener">Repository</a>
     </div>
   </footer>
 
   <script>
+    const menu = document.querySelector(".menu");
+    const header = document.querySelector("header");
+    menu.addEventListener("click", () => {
+      const open = header.classList.toggle("is-open");
+      menu.setAttribute("aria-expanded", open ? "true" : "false");
+      menu.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+    });
+    document.getElementById("nav").addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        header.classList.remove("is-open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-label", "Apri il menu");
+      }
+    });
+
     /*
-      ===== ELENCO CONSEGNE =====
-      Per aggiungere i link basta compilare i campi qui sotto:
-        canva     → link alla presentazione Canva
-        relazione → link al file su GitHub
-      Se un campo è vuoto (""), il bottone appare grigio e non cliccabile.
+      Dopo ogni consegna compilare canva e relazione.
+      relazione è un percorso dalla radice del sito, così il PDF si apre su GitHub Pages.
+      Se i due campi restano vuoti, il passo resta "In programma".
     */
     const consegne = [
       {
-        numero: "Compito 1",
         titolo: "Needfinding",
-        descrizione: "Needfinding e sintesi dei risultati.",
-        data: "12/10/2026",
+        descrizione: "Individuazione dei bisogni, questionario e interviste.",
+        data: "12 ottobre 2026",
         canva: "https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view",
-        relazione: "https://github.com/NicoMimy56/Progetto-Human-Computer-Interaction/blob/main/Consegne/C1-Needfinding/01-Documenti/C1_Relazione.pdf"
+        relazione: "Consegne/C1-Needfinding/01-Documenti/C1_Relazione.pdf"
       },
       {
-        numero: "Compito 2",
         titolo: "Revisione e focalizzazione",
         descrizione: "Revisione dei risultati e focalizzazione del problema.",
         data: "",
@@ -249,23 +514,20 @@
         relazione: ""
       },
       {
-        numero: "Compito 3",
-        titolo: "Prototipo low-fidelity",
+        titolo: "Prototipo a bassa fedeltà",
         descrizione: "Primo prototipo a bassa fedeltà.",
         data: "",
         canva: "",
         relazione: ""
       },
       {
-        numero: "Compito 4",
-        titolo: "Prototipo medium-fidelity",
+        titolo: "Prototipo a media fedeltà",
         descrizione: "Raffinamento e prototipo a media fedeltà.",
         data: "",
         canva: "",
         relazione: ""
       },
       {
-        numero: "Compito 5",
         titolo: "Valutazione euristica",
         descrizione: "Valutazione euristica del prototipo di un altro gruppo.",
         data: "",
@@ -273,7 +535,6 @@
         relazione: ""
       },
       {
-        numero: "Compito 6",
         titolo: "User testing e report finale",
         descrizione: "User testing, raffinamento del prototipo e report finali.",
         data: "",
@@ -282,28 +543,31 @@
       }
     ];
 
-    const container = document.getElementById("deliverables");
+    const steps = document.getElementById("steps");
 
-    function bottone(link, testo, classe) {
-      if (!link) return `<span class="btn ${classe} disabled">${testo}</span>`;
-      return `<a class="btn ${classe}" href="${link}" target="_blank" rel="noopener">${testo}</a>`;
+    function link(href, testo, esterno) {
+      if (!href) return "";
+      const extra = esterno ? ' target="_blank" rel="noopener"' : "";
+      return `<a href="${href}"${extra}>${testo}</a>`;
     }
 
-    consegne.forEach(c => {
-      container.insertAdjacentHTML("beforeend", `
-        <div class="card">
-          <span class="num">${c.numero}</span>
+    consegne.forEach((c, i) => {
+      const pronta = Boolean(c.canva || c.relazione);
+      const links = [
+        link(c.canva, "Presentazione", true),
+        link(c.relazione, "Relazione", false)
+      ].filter(Boolean).join("");
+      const stato = pronta ? "Pubblicata" + (c.data ? " · " + c.data : "") : "In programma";
+      steps.insertAdjacentHTML("beforeend", `
+        <li class="step${pronta ? "" : " soon"}">
+          <span class="n">${String(i + 1).padStart(2, "0")}</span>
           <h3>${c.titolo}</h3>
+          <span class="state">${stato}</span>
           <p>${c.descrizione}</p>
-          ${c.data ? `<span class="date">Consegna: ${c.data}</span>` : ""}
-          <div class="buttons">
-            ${bottone(c.canva, "Presentazione", "primary")}
-            ${bottone(c.relazione, "Relazione", "secondary")}
-          </div>
-        </div>
+          ${links ? `<div class="links">${links}</div>` : ""}
+        </li>
       `);
     });
   </script>
 </body>
 </html>
-

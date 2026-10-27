@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InterAct — Atelier · Fondamenti di HCI</title>
-  <meta name="description" content="InterAct · CoForma: progetto di Fondamenti di HCI al Politecnico di Milano. Un'AI guida nella progettazione di oggetti fisici, prima di fabbricare.">
+  <title>CoForma · InterAct · Fondamenti di HCI</title>
+  <meta name="description" content="CoForma, progetto InterAct di Fondamenti di HCI al Politecnico di Milano. Un'AI guida nella progettazione di oggetti fisici, prima di fabbricare.">
   <meta name="theme-color" content="#10243f">
   <link rel="icon" href="assets/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -198,9 +198,6 @@
       margin-top: 28px;
       width: min(100%, 280px);
       height: auto;
-      border-radius: 12px;
-      background: #0a0a0a;
-      padding: 18px 20px;
     }
 
     .people {
@@ -351,9 +348,9 @@
   <main id="contenuto">
     <div class="hero">
       <div class="wrap">
-        <p class="kicker">Atelier · Fondamenti di HCI · A.A. 2026/27</p>
-        <h1>Inter<span>Act</span></h1>
-        <p class="tagline">Capire il pezzo, prima di fabbricarlo.</p>
+        <p class="kicker">Fondamenti di HCI · A.A. 2026/27 · gruppo InterAct</p>
+        <h1>Co<span>Forma</span></h1>
+        <p class="tagline">Progetta, non farti progettare.</p>
         <p class="lead">Chi realizza prototipi e montaggi chiede a un assistente come fare. La risposta arriva già chiusa: il risultato può funzionare, ma vincoli e compromessi restano nascosti.</p>
       </div>
     </div>
@@ -367,7 +364,7 @@
         <div>
           <div class="prose">
             <p>Studenti, maker e giovani progettisti chiedono a ChatGPT, Gemini o Claude come realizzare un oggetto fisico: come dimensionare un pezzo, quale materiale scegliere, in che ordine montare le parti. L’assistente tende a consegnare una sequenza già chiusa. Chi la esegue può ottenere un risultato che funziona, senza essersi fatto un’idea delle forze in gioco, dei vincoli e delle alternative scartate.</p>
-            <p>È il <em>deskilling</em>. La competenza non si forma, e la responsabilità della decisione diventa opaca, perché il ragionamento resta dentro lo strumento. InterAct vuole riportare comprensione, alternative e responsabilità prima della fabbricazione: nel momento in cui l’intelligenza artificiale entra nel lavoro fisico, prima della stampa, del taglio o del montaggio.</p>
+            <p>È il <em>deskilling</em>, fisico e sul software. La competenza non si forma, e la responsabilità della decisione diventa opaca, perché il ragionamento resta dentro lo strumento. CoForma vuole passare da un’AI esecutrice a una guida nel flusso di progettazione: alternative modificabili, compromessi visibili e scelte giustificabili prima della stampa, del taglio o del montaggio.</p>
           </div>
           <p class="aside">La forma dello strumento non era decisa in partenza. Il punto di partenza è il computer; la realtà estesa resta una possibilità, non una premessa.</p>
           <p class="eyebrow who-label">Per chi</p>
@@ -402,37 +399,37 @@
             <p>Video e colleghi contano più dei manuali. Il computer è il dispositivo di riferimento: quasi nessuno ha un visore.</p>
           </li>
         </ol>
-        <p class="close">Dal needfinding iniziale sono emersi bisogni su alternative, spiegazioni e fiducia. Con la consegna 2 li abbiamo raffinati e consolidati in quattro bisogni strutturali.</p>
+        <p class="close">Ne escono bisogni su alternative, spiegazioni e fiducia. Nel passo successivo li abbiamo raffinati, collegati a personas e chiusi nel nome del progetto.</p>
       </div>
     </section>
 
     <section id="coforma">
       <div class="wrap split">
         <div>
-          <p class="eyebrow">Consegna 2</p>
+          <p class="eyebrow">Personas e nome</p>
           <h2>CoForma</h2>
-          <img class="product-mark" src="assets/logo-coforma.png" alt="Logo CoForma">
+          <img class="product-mark" src="assets/logo-coforma.png?v=2" alt="Logo CoForma">
         </div>
         <div>
           <div class="prose">
-            <p>Dopo C1 abbiamo fatto un questionario di raffinamento (24 risposte) e un’intervista in presenza a un utente target. Ne è uscita una direzione più chiara: non un’AI che chiude il pezzo al posto tuo, ma una guida nel flusso di progettazione.</p>
-            <p><em>«Progetta, non farti progettare.»</em> CoForma unisce collaborazione e forma: più alternative modificabili, diagnosi sul modello, trade-off visibili e fonti con margine di incertezza, prima di fabbricare.</p>
+            <p>Abbiamo raffinato il dominio: l’AI disconnessa dal CAD lascia geometrie difficili da modificare e parametri senza fonti, nascondendo i trade-off. Un questionario di raffinamento (24 risposte) ha reso chiari fiducia bassa nei dati tecnici, il problema del blocco unico, l’omissione dell’uso dell’AI in revisione e il deskilling sui comandi del software. Un’intervista in presenza a un utente target ha approfondito il passaggio dal 2D al 3D e la richiesta di una guida, non di un automatismo cieco.</p>
+            <p>Da quattordici bisogni iniziali, filtrati per impatto, anti-deskilling e spazio HCI, restano quattro bisogni strutturali. Cinque personas li rendono concreti. Il nome <em>CoForma</em> unisce collaborazione e forma: un’AI che progetta con te, lasciandoti controllo e paternità delle scelte. Value proposition: <em>«Progetta, non farti progettare.»</em></p>
           </div>
           <ol class="findings">
             <li>
               <strong>Modificabilità</strong>
-              <p>Intervenire sulle parti del modello generato, senza restare chiusi in un blocco unico.</p>
+              <p>Intervenire in modo granulare sul modello generato, partendo da più opzioni invece di un blocco chiuso.</p>
             </li>
             <li>
               <strong>Diagnosi contestuale</strong>
-              <p>Vedere dove e perché qualcosa non torna sul pezzo 3D, non un pulsante opaco che corregge da solo.</p>
+              <p>Vedere sul pezzo 3D dove e perché qualcosa non funziona, come co-pilota e non come bottone magico.</p>
             </li>
             <li>
               <strong>Trasparenza e competenze</strong>
-              <p>Confrontare compromessi, capire il perché, tenere fonti e procedimenti che si possano riusare e giustificare.</p>
+              <p>Dichiarare priorità, confrontare compromessi, capire il perché e tenere fonti e procedimenti da giustificare.</p>
             </li>
           </ol>
-          <p class="aside">Cinque personas (Giulia, Pablo, Mirko, Matteo, Sofia) legano i bisogni a comportamenti concreti. Presentazione e schede sono nel percorso qui sotto.</p>
+          <p class="aside">Personas: Giulia Ferraris, Pablo Pérez, Mirko Morelli, Matteo Colombo, Sofia Rinaldi. Presentazione e schede sono nel percorso.</p>
         </div>
       </div>
     </section>
@@ -501,7 +498,7 @@
 
   <footer>
     <div class="wrap">
-      <p>InterAct · Fondamenti di HCI · Politecnico di Milano</p>
+      <p>CoForma · InterAct · Fondamenti di HCI · Politecnico di Milano</p>
       <a href="https://github.com/NicoMimy56/Progetto-Human-Computer-Interaction" target="_blank" rel="noopener">Repository</a>
     </div>
   </footer>
@@ -537,8 +534,8 @@
         ]
       },
       {
-        titolo: "Raffinamento e focus",
-        descrizione: "Questionario di raffinamento, intervista target, personas e soluzione CoForma.",
+        titolo: "Personas e identificazione del nome",
+        descrizione: "Raffinamento dei bisogni, personas, soluzioni preliminari e nome CoForma.",
         data: "ottobre 2026",
         links: [
           { href: "Consegne/C2-Personas/C2%20-%20Presentazione.pdf", testo: "Presentazione" },

@@ -1,11 +1,11 @@
-# Atelier — Fondamenti di HCI
+# CoForma — Fondamenti di HCI
 
 Progetto di gruppo del corso **Fondamenti di Human-Computer Interaction**
 Politecnico di Milano · A.A. 2026/27 · Tema del corso: **Living with AI**
 
 **Gruppo interACT:** Giovanni Lodovici · Federico Marletta · Sandu Nicholas Mihali · Marco Minora · Jaime Martín Nieto · Andrea Simoncini
 
-**Prodotto in definizione:** [CoForma](index.html#coforma) — *Progetta, non farti progettare.*
+**Prodotto:** [CoForma](index.html#coforma) — *Progetta, non farti progettare.*
 
 ---
 
@@ -37,8 +37,8 @@ Studenti, maker e giovani progettisti che progettano e realizzano pezzi fisici:
 | Fase | Stato |
 |------|-------|
 | Definizione del problema e del tema | Completata |
-| Needfinding (questionario + interviste) | Completata — consegna C1 del 12/10/2026 |
-| Raffinamento, personas e focus | Completata — consegna C2 (ottobre 2026) |
+| Needfinding (questionario + interviste) | Completata — 12/10/2026 |
+| Personas e identificazione del nome | Completata — ottobre 2026 |
 | Prototipi (bassa → media fedeltà) | Da fare |
 | Valutazione / test con utenti | Da fare |
 
@@ -49,7 +49,7 @@ Studenti, maker e giovani progettisti che progettano e realizzano pezzi fisici:
 | Consegna | Contenuto | Cartella |
 |----------|-----------|----------|
 | **C1 — Individuazione dei bisogni** | Presentazione, relazione, questionario, interviste | [`Consegne/C1-Needfinding/`](Consegne/C1-Needfinding/) |
-| **C2 — Raffinamento e focus** | Presentazione, personas, questionario di raffinamento, intervista Giada | [`Consegne/C2-Personas/`](Consegne/C2-Personas/) |
+| **C2 — Personas e identificazione del nome** | Presentazione, personas, questionario di raffinamento, intervista Giada | [`Consegne/C2-Personas/`](Consegne/C2-Personas/) |
 
 ---
 
@@ -88,7 +88,7 @@ OrganizzazioneInterACT/
 
 ---
 
-## Raffinamento (C2)
+## Personas e nome (C2)
 
 - **Questionario di raffinamento**: 24 risposte su fiducia, verifica, blocchi operativi e priorità dei bisogni.
 - **Intervista target** a Giada Cardellini (Interior Design): dal 2D al 3D, blocchi chiusi dei generatori AI, deskilling sul software.

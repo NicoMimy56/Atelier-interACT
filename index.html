@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InterAct — Atelier · Fondamenti di HCI</title>
-  <meta name="description" content="InterAct è il progetto di Fondamenti di HCI del Politecnico di Milano. Studia come restituire comprensione e responsabilità quando l'intelligenza artificiale entra nella realizzazione di oggetti fisici.">
+  <meta name="description" content="InterAct · CoForma: progetto di Fondamenti di HCI al Politecnico di Milano. Un'AI guida nella progettazione di oggetti fisici, prima di fabbricare.">
   <meta name="theme-color" content="#10243f">
   <link rel="icon" href="assets/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -194,6 +194,14 @@
       line-height: 1.35;
       letter-spacing: -.02em;
     }
+    .product-mark {
+      margin-top: 28px;
+      width: min(100%, 280px);
+      height: auto;
+      border-radius: 12px;
+      background: #0a0a0a;
+      padding: 18px 20px;
+    }
 
     .people {
       display: grid;
@@ -333,6 +341,7 @@
       <nav id="nav">
         <a href="#problema">Problema</a>
         <a href="#ricerca">Ricerca</a>
+        <a href="#coforma">CoForma</a>
         <a href="#gruppo">Gruppo</a>
         <a href="#percorso">Percorso</a>
       </nav>
@@ -393,7 +402,38 @@
             <p>Video e colleghi contano più dei manuali. Il computer è il dispositivo di riferimento: quasi nessuno ha un visore.</p>
           </li>
         </ol>
-        <p class="close">Ne escono tre bisogni: confrontare alternative e compromessi, capire perché una scelta è stata indicata, e sapere quanto fidarsi di quell’indicazione.</p>
+        <p class="close">Dal needfinding iniziale sono emersi bisogni su alternative, spiegazioni e fiducia. Con la consegna 2 li abbiamo raffinati e consolidati in quattro bisogni strutturali.</p>
+      </div>
+    </section>
+
+    <section id="coforma">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Consegna 2</p>
+          <h2>CoForma</h2>
+          <img class="product-mark" src="assets/logo-coforma.png" alt="Logo CoForma">
+        </div>
+        <div>
+          <div class="prose">
+            <p>Dopo C1 abbiamo fatto un questionario di raffinamento (24 risposte) e un’intervista in presenza a un utente target. Ne è uscita una direzione più chiara: non un’AI che chiude il pezzo al posto tuo, ma una guida nel flusso di progettazione.</p>
+            <p><em>«Progetta, non farti progettare.»</em> CoForma unisce collaborazione e forma: più alternative modificabili, diagnosi sul modello, trade-off visibili e fonti con margine di incertezza, prima di fabbricare.</p>
+          </div>
+          <ol class="findings">
+            <li>
+              <strong>Modificabilità</strong>
+              <p>Intervenire sulle parti del modello generato, senza restare chiusi in un blocco unico.</p>
+            </li>
+            <li>
+              <strong>Diagnosi contestuale</strong>
+              <p>Vedere dove e perché qualcosa non torna sul pezzo 3D, non un pulsante opaco che corregge da solo.</p>
+            </li>
+            <li>
+              <strong>Trasparenza e competenze</strong>
+              <p>Confrontare compromessi, capire il perché, tenere fonti e procedimenti che si possano riusare e giustificare.</p>
+            </li>
+          </ol>
+          <p class="aside">Cinque personas (Giulia, Pablo, Mirko, Matteo, Sofia) legano i bisogni a comportamenti concreti. Presentazione e schede sono nel percorso qui sotto.</p>
+        </div>
       </div>
     </section>
 
@@ -482,52 +522,52 @@
     });
 
     /*
-      Dopo ogni consegna compilare canva e relazione.
-      relazione è un percorso dalla radice del sito, così il PDF si apre su GitHub Pages.
-      Se i due campi restano vuoti, il passo resta "In programma".
+      Dopo ogni consegna compilare i link.
+      Per i PDF locali usare percorsi dalla radice del sito.
+      Se non ci sono link, il passo resta "In programma".
     */
     const consegne = [
       {
         titolo: "Needfinding",
         descrizione: "Individuazione dei bisogni, questionario e interviste.",
         data: "12 ottobre 2026",
-        canva: "https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view",
-        relazione: "Consegne/C1-Needfinding/01-Documenti/C1_Relazione.pdf"
+        links: [
+          { href: "https://www.canva.com/design/DAHXWDH3ePY/3lJc8jhLtZtCvV5FqZtxFg/view", testo: "Presentazione", esterno: true },
+          { href: "Consegne/C1-Needfinding/01-Documenti/C1_Relazione.pdf", testo: "Relazione" }
+        ]
       },
       {
-        titolo: "Revisione e focalizzazione",
-        descrizione: "Revisione dei risultati e focalizzazione del problema.",
-        data: "",
-        canva: "",
-        relazione: ""
+        titolo: "Raffinamento e focus",
+        descrizione: "Questionario di raffinamento, intervista target, personas e soluzione CoForma.",
+        data: "ottobre 2026",
+        links: [
+          { href: "Consegne/C2-Personas/C2%20-%20Presentazione.pdf", testo: "Presentazione" },
+          { href: "Consegne/C2-Personas/Materiali/Personas-InterAct.pdf", testo: "Personas" }
+        ]
       },
       {
         titolo: "Prototipo a bassa fedeltà",
         descrizione: "Primo prototipo a bassa fedeltà.",
         data: "",
-        canva: "",
-        relazione: ""
+        links: []
       },
       {
         titolo: "Prototipo a media fedeltà",
         descrizione: "Raffinamento e prototipo a media fedeltà.",
         data: "",
-        canva: "",
-        relazione: ""
+        links: []
       },
       {
         titolo: "Valutazione euristica",
         descrizione: "Valutazione euristica del prototipo di un altro gruppo.",
         data: "",
-        canva: "",
-        relazione: ""
+        links: []
       },
       {
         titolo: "User testing e report finale",
         descrizione: "User testing, raffinamento del prototipo e report finali.",
         data: "",
-        canva: "",
-        relazione: ""
+        links: []
       }
     ];
 
@@ -540,11 +580,12 @@
     }
 
     consegne.forEach((c, i) => {
-      const pronta = Boolean(c.canva || c.relazione);
-      const links = [
-        link(c.canva, "Presentazione", true),
-        link(c.relazione, "Relazione", false)
-      ].filter(Boolean).join("");
+      const voci = c.links || [];
+      const pronta = voci.length > 0;
+      const links = voci
+        .map((l) => link(l.href, l.testo, Boolean(l.esterno)))
+        .filter(Boolean)
+        .join("");
       const stato = pronta ? "Pubblicata" + (c.data ? " · " + c.data : "") : "In programma";
       steps.insertAdjacentHTML("beforeend", `
         <li class="step${pronta ? "" : " soon"}">

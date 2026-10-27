@@ -5,7 +5,7 @@ Politecnico di Milano · A.A. 2026/27 · Tema del corso: **Living with AI**
 
 **Gruppo interACT:** Giovanni Lodovici · Federico Marletta · Sandu Nicholas Mihali · Marco Minora · Jaime Martín Nieto · Andrea Simoncini
 
-**Prodotto:** [CoForma] — *Progetta, non farti progettare.*
+**Prodotto:** CoForma — *Progetta, non farti progettare.*
 
 ---
 
